@@ -26,9 +26,9 @@
 | 주차 | 주제 | 내용 |
 |------|------|------|
 | 1주차 | 환경설정 & Dart 문법 | Flutter 설치, 에뮬레이터 준비, GitHub 계정, 변수, 조건문, 함수, 클래스, async 등 |
-| 2주차 | 기본 위젯 | Column, Row, ListView, 상태관리 등 |
-| 3주차 | 레이아웃 & 라우팅 | 화면 전환, BottomNavigationBar, 라우트 |
-| 4주차 | 상태관리 심화 | GetX 기본, controller & reactive 관리 |
+| 2주차 | Flutter 프레임 워크 이해 | 기본위젯 배우기 |
+| 3주차 | 상태관리와 페이지 이동 | setState, navigate 로 페이지 이동하기 |
+| 4주차 | 상태관리 심화 | GetX 기본, controller & reactive 관리, http패키지, flutter_secure_store |
 | 5주차 | MVVM + 클론코딩 | ToDo 앱 만들기 (GetX + MVVM 구조 적용) |
 
 ---
