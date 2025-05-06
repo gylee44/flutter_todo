@@ -1,16 +1,49 @@
-# week2
+# 📚 2주차 과제 - 기본 위젯 사용하기
 
-A new Flutter project.
+## 🗓️ 과제 제출 기한
+`YYYY-MM-DD` (수업 다음 주차 전까지)
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✅ 과제 목표
 
-A few resources to get you started if this is your first Flutter project:
+- Flutter의 기본 위젯을 사용해 하나의 화면을 구성해봅니다.
+- `Text`, `TextField`, `Button`, `Image`, `ListView` 등 자주 쓰이는 위젯을 실습합니다.
+- 상태 관리(`setState`)를 사용해 **입력값 반영** 또는 **버튼 클릭 시 상태 변화**를 구현합니다.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🧪 과제 설명
+
+### 올라와 있는 내용을 조금씩 바꿔보세요:
+
+1. **앱 제목은 "나의 첫 Flutter 앱"** 으로 표시
+2. 버튼을 눌렀을 때 카운트가 증가하는 기능 (`setState`)
+3. 관심 기술 리스트 (`ListView`)를 나의 관심기술에 맞게 편집해보기.
+4. 버튼 클릭 시 `SnackBar`로 나오는 메시지 변환해보기.
+
+### UI 종류 32 가지에 대해 조사하고 각 위젯에 맞는 flutter객체에 대해 조사하세요.
+1. 형식 자유, 블로그, 문서 등등
+2. 32개에 대응되는 위젯을 나중에 확인할 수 있으면 됨.
+
+---
+
+## 🧾 제출 방법
+
+1. 자신의 이름으로 된 branch 생성 `tesu-park`
+2. 자신의 이름으로 된 branch 상태에서 `home_screen.dart`에 작성한 코드 푸시
+3. `README.md`에 스크린샷 1장 첨부
+4. 레포지토리 주소를 Google Form 또는 Discord에 제출
+
+---
+
+## 📎 예시 스크린샷
+(여기에 예시 이미지 첨부)
+
+---
+
+## 💡 팁
+
+- `setState()` 안에서 상태를 바꿔야 화면이 업데이트됩니다.
+- 이미지 주소는 Unsplash나 Flutter 공식 이미지 사용 가능.
+- `Scaffold`, `AppBar`, `Center`, `Column`, `SizedBox` 등 기본 위젯 조합 연습해 보세요.
