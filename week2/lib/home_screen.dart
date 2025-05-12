@@ -8,6 +8,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   String _inputText = '';
   int _counter = 0;
+  int _counter1 = 0;
 
   void _incrementCounter() {
     setState(() {
@@ -16,8 +17,13 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void _showSnackbar(BuildContext context) {
+    setState(() {
+      _counter1++;
+    });
+
+
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('버튼이 눌렸어요!')),
+      SnackBar(content: Text(_counter1 < 5 ? '아무거나 자꾸 누르지 마세요😡': '더 눌러도 뭐 없습니다 진짜 그만 눌러요..')),
     );
   }
 
@@ -25,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('자주 쓰는 위젯들'),
+        title: Text('이기용의 첫 Flutter 앱'),
         actions: [
           IconButton(
             icon: Icon(Icons.info_outline),
@@ -40,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             // 텍스트 위젯
             Text(
-              'Hello, Flutter!',
+              '안녕하세요 이기용입니다.',
               style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 16),
@@ -55,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
             // 입력창
             TextField(
               decoration: InputDecoration(
-                labelText: '이름을 입력하세요',
+                labelText: '아무거나 입력하세요',
                 border: OutlineInputBorder(),
               ),
               onChanged: (value) {
@@ -65,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
               },
             ),
             SizedBox(height: 8),
-            Text('입력한 이름: $_inputText'),
+            Text('입력된게 표시됩니다 -> $_inputText'),
             SizedBox(height: 16),
 
             // 버튼
@@ -74,6 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Text('카운터 증가'),
             ),
             Text('카운트: $_counter'),
+            Text( _counter1 < 5 ? '5번 이상 누르지 마세요: $_counter1' : '말을 잘 안들으시네요👿' ),
             SizedBox(height: 16),
 
             // 리스트
@@ -92,13 +99,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 ListTile(
                   leading: Icon(Icons.android),
-                  title: Text('Android'),
-                  subtitle: Text('모바일 OS'),
+                  title: Text('Kotlin'),
+                  subtitle: Text('Android 공식 언어'),
                 ),
                 ListTile(
                   leading: Icon(Icons.web),
                   title: Text('Web 개발'),
-                  subtitle: Text('HTML/CSS/JS'),
+                  subtitle: Text('HTML & CSS & JS'),
                 ),
               ],
             ),
