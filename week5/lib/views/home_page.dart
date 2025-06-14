@@ -13,7 +13,19 @@ class HomePage extends GetView<TodoController> {
         itemCount: controller.todos.length,
         itemBuilder: (context, index) {
           final todo = controller.todos[index];
-          return ListTile(
+
+
+          return  GestureDetector(
+              onLongPress: () { //이부분 롱클릭 시 편집 이동
+            Get.toNamed(
+              Routes.EDIT,
+              arguments: {
+                'index': index,
+                'todo': todo,
+              },
+            );
+          },
+          child: ListTile(
             title: Text(
               todo.title,
               style: TextStyle(
@@ -26,6 +38,7 @@ class HomePage extends GetView<TodoController> {
               onPressed: () => controller.deleteTodo(index),
             ),
             onTap: () => controller.toggleTodo(index),
+          ),
           );
         },
       )),
